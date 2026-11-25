@@ -1,0 +1,37 @@
+/* 确保所有缓存清理按钮都使用相同样式 */
+.cache-cleaner-button {
+    width: 100%;
+    margin-top: 0.5em;
+    padding: 0.5em;
+    border-radius: 4px;
+    border: 1px solid var(--button-text);
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    cursor: pointer;
+    box-sizing: border-box;
+    display: block; /* 确保按钮占满容器宽度 */
+}
+
+.cache-cleaner-button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.cache-cleaner-divider {
+    margin-top: 0.5em;
+    padding-top: 0.5em;
+    border-top: 1px solid var(--button-text);
+    width: 100%; /* 确保分隔线占满宽度 */
+    display: block; /* 确保作为块级元素显示 */
+}
+
+/* 针对登录对话框的特殊调整 */
+div.dialog[aria-modal="true"] .cache-cleaner-button {
+    margin-top: 1em; /* 在登录框中增加上边距 */
+}
+
+/* 确保按钮容器在登录框中正确显示 */
+div.dialog[aria-modal="true"] .cache-cleaner-divider {
+    margin: 1em 0;
+    padding: 1em 0;
+}
